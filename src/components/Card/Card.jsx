@@ -1,6 +1,5 @@
 import React from 'react'
 import { ReactComponent as MenuIcon } from '../../assets/menu.svg'
-import PlaceholderImage from '../../assets/placeholder.jpeg'
 import AddPlaceholderImage from '../../assets/add.jpg'
 import Image from '../Image/Image'
 import Button from '../Button/Button'

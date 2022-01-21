@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import CardList from '../components/CardList/CardList'
 import Input from '../components/Input/Input'
 import Student from '../components/Modal/Student/Student'
@@ -6,8 +6,23 @@ import Student from '../components/Modal/Student/Student'
 const Home = () => {
 
     const [students, setStudents] = useState([])
+    const [filteredStudents, setFilteredStudents] = useState([])
     const [name, setName] = useState('')
     const [modal, setModal] = useState('')
+
+    const filterStudentsHandler = (value, students) => {
+        const updatedData = students.filter(student => student.name.toLowerCase().includes(value.toLowerCase()) || student.name.toLowerCase().startsWith(value.toLowerCase()))
+        setFilteredStudents(updatedData)
+    }
+
+    useEffect(() => {
+        if (name.length === 0) setFilteredStudents(students)
+        else filterStudentsHandler(name, students)
+    }, [name])
+
+    useEffect(() => {
+        setFilteredStudents(students)
+    }, [students])
 
     return (
         <>
@@ -18,7 +33,7 @@ const Home = () => {
                     <Input placeholder='Enter student name here' className='search' value={name} onChange={(event) => setName(event.target.value)} />
                 </div>
                 <div className='home__cardcontainer'>
-                    <CardList students={students} setStudents={setStudents} setModal={setModal} />
+                    <CardList students={filteredStudents} setStudents={setStudents} setModal={setModal} />
                 </div>
             </div>
         </>
