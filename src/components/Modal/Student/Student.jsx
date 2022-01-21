@@ -47,9 +47,6 @@ const Student = ({ setModal, student, students, setStudents }) => {
 
         tempStudent[studentIndex] = studentData
 
-        console.log('studentIndex: ', studentIndex)
-        console.log('tempStudent: ', tempStudent)
-
         setStudents(tempStudent)
         setModal('')
     }
