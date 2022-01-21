@@ -6,7 +6,7 @@ import Image from '../../Image/Image'
 import Input from '../../Input/Input'
 import Modal from '../Modal'
 
-const Student = ({ setModal, student, setStudents }) => {
+const Student = ({ setModal, students, setStudents }) => {
 
     const [image, setImage] = useState('')
     const [name, setName] = useState('')
@@ -17,6 +17,7 @@ const Student = ({ setModal, student, setStudents }) => {
         else if (image.length === 0) return alert('Please choose student image, in order to add student')
 
         const student = {
+            id: students.length + 1,
             name,
             image,
             add: 0,

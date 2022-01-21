@@ -11,7 +11,7 @@ const Home = () => {
 
     return (
         <>
-            {modal === 'add' ? <Student setModal={setModal} setStudents={setStudents} />
+            {modal === 'add' ? <Student setModal={setModal} students={students} setStudents={setStudents} />
             : modal === 'update' ? <Student setModal={setModal} /> : null}
             <div className='home__container'>
                 <div className='home__inputcontainer'>
