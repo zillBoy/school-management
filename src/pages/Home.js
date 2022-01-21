@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import Card from '../components/Card/Card'
+import React, { useState } from 'react'
 import CardList from '../components/CardList/CardList'
 import Input from '../components/Input/Input'
 
 const Home = () => {
 
-    const [students, setStudents] = useState([{name: '', image: '', addCount: 0, subtractCount: 0}, {}, {}, {}, {}])
+    const [students, setStudents] = useState([{name: '', image: '', add: 0, subtract: 0}])
     const [name, setName] = useState('')
 
     return (
