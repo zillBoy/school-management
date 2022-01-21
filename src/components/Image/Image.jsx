@@ -7,7 +7,7 @@ const Image = ({ className='', src }) => {
         <div className='image__container'>
             <img 
                 className={`${className.length !== 0 ? `image__container-${className}` : `image__container-image`}`} 
-                src={src === undefined ? PlaceholderImage : src}
+                src={src === null ? PlaceholderImage : src}
                 alt='student' 
             />
         </div>

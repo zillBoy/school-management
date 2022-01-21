@@ -3,3 +3,10 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin image {
+    width: $image-width;
+    height: $image-height;
+    border-radius: calc($image-width / 2);
+    object-fit: cover;
+}

@@ -3,15 +3,17 @@
     @include center;
 
     &-image {
-        width: $image-width;
-        height: $image-height;
-        border-radius: calc($image-width / 2);
-        margin: 2rem 0;
+        @include image;
     }
 
     &-addimage {
         width: calc($card-width / 2);
         height: calc($card-height / 2);
         object-fit: cover;
+    }
+
+    &-modal {
+        @include image;
+        margin: 2rem 0;
     }
 }
