@@ -9,6 +9,7 @@ const Home = () => {
     const [filteredStudents, setFilteredStudents] = useState([])
     const [name, setName] = useState('')
     const [modal, setModal] = useState('')
+    const [modalData, setModalData] = useState({})
 
     const filterStudentsHandler = (value, students) => {
         const updatedData = students.filter(student => student.name.toLowerCase().includes(value.toLowerCase()) || student.name.toLowerCase().startsWith(value.toLowerCase()))
@@ -27,13 +28,13 @@ const Home = () => {
     return (
         <>
             {modal === 'add' ? <Student setModal={setModal} students={students} setStudents={setStudents} />
-            : modal === 'update' ? <Student setModal={setModal} /> : null}
+            : modal === 'update' ? <Student student={modalData} students={students} setStudents={setStudents} setModal={setModal} /> : null}
             <div className='home__container'>
                 <div className='home__inputcontainer'>
                     <Input placeholder='Enter student name here' className='search' value={name} onChange={(event) => setName(event.target.value)} />
                 </div>
                 <div className='home__cardcontainer'>
-                    <CardList students={filteredStudents} setStudents={setStudents} setModal={setModal} />
+                    <CardList students={filteredStudents} setStudents={setStudents} setModal={setModal} setModalData={setModalData} />
                 </div>
             </div>
         </>

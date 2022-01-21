@@ -6,7 +6,7 @@ import Button from '../Button/Button'
 import Input from '../Input/Input'
 import Dropdown from '../Dropdown/Dropdown'
 
-const Card = ({ empty, students, setStudents, student, onClick }) => {
+const Card = ({ empty, students, setStudents, student, onClick, setModal, setModalData }) => {
 
 
     const [showDropdown, setShowDropdown] = useState(false)
@@ -41,11 +41,14 @@ const Card = ({ empty, students, setStudents, student, onClick }) => {
     }
 
     const onEditHandler = () => {
-        console.log('edit handler')
+        setModal('update')
+        setModalData(student)
+        setShowDropdown(false)
     }
 
     const onDeleteHandler = () => {
-        console.log('delete handler')
+        const filteredStudents = students.filter(_student => _student.id !== student.id)
+        setStudents(filteredStudents)
     }
 
     return (
