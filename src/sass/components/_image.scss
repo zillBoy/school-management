@@ -6,6 +6,7 @@
         width: $image-width;
         height: $image-height;
         border-radius: calc($image-width / 2);
+        margin: 2rem 0;
     }
 
     &-addimage {

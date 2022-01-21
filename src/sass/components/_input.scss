@@ -10,5 +10,19 @@
         &--search {
             width: calc($input-width * 2.5);
         }
+
+        &--modalfile {
+            width: calc($modal-width - 4rem);
+            border: 1px solid $black-color;
+            @include center;
+            padding: 0.8rem;
+        }
+        
+        &--modal {
+            width: calc($modal-width - 4rem);
+            border: 1px solid $black-color;
+            @include center;
+        }
+
     }
 }

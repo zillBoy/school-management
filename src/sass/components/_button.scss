@@ -15,5 +15,15 @@
         &--subtract {
             background-color: $button-subtract-color;
         }
+
+        &--cancel {
+            background-color: $dark-gray-color;
+        }
+
+        &--modal {
+            width: calc($button-width / 2);
+            height: calc($button-height * 1.2);
+            margin: 0 0.5rem;
+        }
     }
 }

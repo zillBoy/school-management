@@ -14,6 +14,11 @@
         border-radius: $border-radius;
         border: 1px solid $black-color;
     }
+
+    &-subcontent {
+        margin: 0 auto;
+        width: 95%;
+    }
 }
 
 .modal__header {
@@ -25,4 +30,13 @@
     & > svg {
         cursor: pointer;
     }
+}
+
+.modal__inputcontiner {
+    
+}
+
+.modal__buttoncontainer {
+    display: flex;
+    justify-content: flex-end;
 }
