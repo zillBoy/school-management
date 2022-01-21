@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ReactComponent as MenuIcon } from '../../assets/menu.svg'
 import AddPlaceholderImage from '../../assets/add.jpg'
 import Image from '../Image/Image'
 import Button from '../Button/Button'
 import Input from '../Input/Input'
+import Dropdown from '../Dropdown/Dropdown'
 
 const Card = ({ empty, students, setStudents, student, onClick }) => {
+
+
+    const [showDropdown, setShowDropdown] = useState(false)
+
+    const toggleDropdownHandler = () => {
+        setShowDropdown(!showDropdown)
+    }
 
     const countHandler = (type) => {
 
@@ -32,12 +40,24 @@ const Card = ({ empty, students, setStudents, student, onClick }) => {
         }
     }
 
+    const onEditHandler = () => {
+        console.log('edit handler')
+    }
+
+    const onDeleteHandler = () => {
+        console.log('delete handler')
+    }
+
     return (
         <div onClick={onClick} className={`card__container card__container--${empty && 'empty'}`}>
             <>
                 {empty ? <Image className='addimage' src={AddPlaceholderImage} /> : <>
                 <div className='card__iconmain'>
-                    <MenuIcon className='card__iconmain-icon' />
+                    <MenuIcon onClick={toggleDropdownHandler} className='card__iconmain-icon' />
+                    {showDropdown && <Dropdown  
+                        onEditHandler={onEditHandler}
+                        onDeleteHandler={onDeleteHandler}
+                    />}
                 </div>
                 <Image src={student.image} />
                 <div className='card__heading'>
