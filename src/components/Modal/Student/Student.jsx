@@ -67,7 +67,7 @@ const Student = ({ setModal, student, students, setStudents }) => {
     }, [])
 
     return ReactDOM.createPortal((
-        <Modal setModal={setModal} heading='Add Student'>
+        <Modal setModal={setModal} heading={`${student !== undefined ? 'Update' : 'Add'} Student`}>
             <Image className='modal' src={image.length !== 0 ? image : null} />
             <div className='modal__container-subcontent'>
                 <div className='modal__inputcontiner'>
