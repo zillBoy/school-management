@@ -1,0 +1,10 @@
+.input__container {
+
+    margin: 1rem 0;
+
+    &-input {
+        width: $input-width;
+        height: $input-height;
+        padding: 0 2rem;
+    }
+}

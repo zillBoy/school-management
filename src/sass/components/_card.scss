@@ -1,0 +1,50 @@
+.card__container {
+    width: $card-width;
+    height: $card-height;
+    box-shadow: $primray-box-shadow;
+}
+
+.card__iconmain {
+
+    display: flex;
+    justify-content: flex-end;
+
+    &-icon {
+
+        margin: 2rem;
+
+        width: $icon-width;
+        height: $icon-height;
+    }
+}
+
+.card__imagediv {
+
+    @include center;
+
+    &-image {
+        width: $image-width;
+        height: $image-height;
+        border-radius: calc($image-width / 2);
+    }
+}
+
+.card__heading {
+    @include center;
+    margin: 1rem 0;
+}
+
+.card__count {
+    @include center;
+    margin: 2rem 0;
+}
+
+.card__buttoncontainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card__inputcontainer {
+    display: flex;
+    justify-content: space-around;
+}

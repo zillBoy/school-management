@@ -1,0 +1,49 @@
+// Color
+
+$primary-color: #ccc;
+$white-color: #fff;
+$black-color: #000;
+
+// Card
+
+$card-width: 30rem;
+$card-height: 35rem;
+
+// Icon
+
+$icon-width: 2rem;
+$icon-height: 2rem;
+
+// Image 
+
+$image-width: 10rem;
+$image-height: 10rem;
+
+// Box Shadow
+
+$primray-box-shadow: 0px 0.1px 0.5px rgba(0, 0, 0, 0.02),
+    0.1px 0.3px 1.1px rgba(0, 0, 0, 0.028),
+    0.1px 0.5px 2.1px rgba(0, 0, 0, 0.035),
+    0.2px 0.9px 3.8px rgba(0, 0, 0, 0.042),
+    0.4px 1.7px 7.1px rgba(0, 0, 0, 0.05),
+    1px 4px 17px rgba(0, 0, 0, 0.07)
+;
+
+// Button
+
+$button-add-color: #0A84FF;
+$button-subtract-color: #FF453A;
+$button-color: $white-color;
+
+$button-width: calc($card-width / 2.2);
+$button-height: 3rem;
+
+// Border Radius
+
+$border-radius: 0.4rem;
+
+// Input
+
+$input-width: calc($card-width / 2.2);
+$input-height: 4rem;
+$input-color: $black-color;

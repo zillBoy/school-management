@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Card from '../components/Card/Card'
+import { students } from '../utils/mockData' 
 
 const Home = () => {
 
+    // const [students, setStudents] = useState([])
+
     return (
-        <div>this is home page</div>
+        <Card student={students[0]} />
     )
 }
 
