@@ -2,36 +2,33 @@ import React from 'react'
 import { ReactComponent as MenuIcon } from '../../assets/menu.svg'
 import PlaceholderImage from '../../assets/placeholder.jpeg'
 import AddPlaceholderImage from '../../assets/add.jpg'
+import Image from '../Image/Image'
 import Button from '../Button/Button'
 import Input from '../Input/Input'
 
-const Card = ({ student }) => {
+const Card = ({ empty, student, onClick }) => {
 
     return (
-        <div className={`card__container card__container--${student.name.length === 0 && 'empty'}`}>
+        <div onClick={onClick} className={`card__container card__container--${empty && 'empty'}`}>
             <>
-                {student.name.length === 0 ? <div className='card__imagediv'>
-                    <img className='card__imagediv-addimage' src={AddPlaceholderImage} alt='add student' />
-                </div> : <>
+                {empty ? <Image className='addimage' src={AddPlaceholderImage} /> : <>
                 <div className='card__iconmain'>
                     <MenuIcon className='card__iconmain-icon' />
                 </div>
-                <div className='card__imagediv'>
-                    <img className='card__imagediv-image' src={PlaceholderImage} alt='student' />
-                </div>
+                <Image src={PlaceholderImage} />
                 <div className='card__heading'>
-                    <h2 className='heading-secondary'>Muhammad</h2>
+                    <h2 className='heading-secondary'>{student.name}</h2>
                 </div>
                 <div className='card__count'>
-                    <p className='primary-paragraph'>1</p>
+                    <p className='primary-paragraph'>{student.count}</p>
                 </div>
                 <div className='card__buttoncontainer'>
                     <Button onClick={() => console.log('btn add called')} btnText='Add' />
                     <Button onClick={() => console.log('btn subtract called')} btnText='Subtract' />
                 </div>
                 <div className='card__inputcontainer'>
-                    <Input value={1} />
-                    <Input value={2} />
+                    <Input value={student.add} />
+                    <Input value={student.subtract} />
                 </div> 
                 </>}
             </>

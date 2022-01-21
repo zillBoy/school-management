@@ -1,0 +1,16 @@
+.image__container {
+
+    @include center;
+
+    &-image {
+        width: $image-width;
+        height: $image-height;
+        border-radius: calc($image-width / 2);
+    }
+
+    &-addimage {
+        width: calc($card-width / 2);
+        height: calc($card-height / 2);
+        object-fit: cover;
+    }
+}

@@ -9,6 +9,7 @@
     &--empty {
         background-color: $light-gray-color;
         @include center;
+        cursor: pointer;
     }
 }
 
@@ -24,23 +25,6 @@
 
         width: $icon-width;
         height: $icon-height;
-    }
-}
-
-.card__imagediv {
-
-    @include center;
-
-    &-image {
-        width: $image-width;
-        height: $image-height;
-        border-radius: calc($image-width / 2);
-    }
-
-    &-addimage {
-        width: calc($card-width / 2);
-        height: calc($card-height / 2);
-        object-fit: cover;
     }
 }
 

@@ -1,0 +1,28 @@
+.modal__container {
+
+    background-color: rgba($color: $black-color, $alpha: 0.1);
+    position: absolute;
+    top: 0%;
+    height: 100vh;
+    width: 100%;
+
+    &-content {
+        background-color: $white-color;
+        width: $modal-width;
+        height: $modal-height;
+        margin: calc($modal-height / 2) auto;
+        border-radius: $border-radius;
+        border: 1px solid $black-color;
+    }
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid $gray-color;
+
+    & > svg {
+        cursor: pointer;
+    }
+}
