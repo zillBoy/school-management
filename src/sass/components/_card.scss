@@ -2,6 +2,9 @@
     width: $card-width;
     height: $card-height;
     box-shadow: $primray-box-shadow;
+    border-radius: $border-radius;
+
+    margin: 2rem;
 }
 
 .card__iconmain {
