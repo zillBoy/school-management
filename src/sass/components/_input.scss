@@ -6,5 +6,9 @@
         width: $input-width;
         height: $input-height;
         padding: 0 2rem;
+
+        &--search {
+            width: calc($input-width * 2.5);
+        }
     }
 }

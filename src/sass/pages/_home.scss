@@ -1,0 +1,12 @@
+.home__container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.home__inputcontainer {
+    margin: 2rem;
+}
+
+.home__cardcontainer {
+    @include center;
+}

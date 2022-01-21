@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Input = ({ ...props }) => {
+const Input = ({ className, ...props }) => {
     return (
         <div className='input__container'>
-            <input className='input__container-input' {...props} />
+            <input className={`input__container-input input__container-input--${className}`} {...props} />
         </div>
     )
 }

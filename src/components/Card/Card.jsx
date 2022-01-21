@@ -6,8 +6,6 @@ import Input from '../Input/Input'
 
 const Card = ({ student }) => {
 
-    console.log('studetn: ', student)
-
     return (
         <div className='card__container'>
             <div className='card__iconmain'>
